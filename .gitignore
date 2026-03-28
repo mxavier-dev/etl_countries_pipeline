@@ -9,8 +9,9 @@ venv/
 # Logs
 *.log
 
-# Dados
-data/
+#data
+data/raw/*
+data/processed/*
 
 # IDE
 .vscode/
