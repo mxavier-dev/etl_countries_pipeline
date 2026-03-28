@@ -10,8 +10,8 @@ venv/
 *.log
 
 #data
-data/raw/*
-data/processed/*
+data/*
+!data/.gitkeep
 
 # IDE
 .vscode/
