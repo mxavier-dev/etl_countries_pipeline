@@ -1,4 +1,4 @@
-from utils.connect.connection import connect
+from connect.connection import connect
 import json
 from datetime import datetime
 
@@ -34,7 +34,7 @@ def insert_countries(data):
             country[2],
             country[3],
             country[4],
-            country[5] if country[4] else None
+            country[5] if country[5] else None
         ))
     try:
         cursor.executemany(query, values)

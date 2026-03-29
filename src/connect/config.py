@@ -1,6 +1,6 @@
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'password': '',
+    'password': '4135',
     'database': 'etl_countries'
 }
