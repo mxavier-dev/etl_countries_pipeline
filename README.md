@@ -13,23 +13,23 @@ This project implements a complete ETL workflow:
 The goal is to simulate a real-world data engineering pipeline with a clear and maintainable structure.
 
 ## 🧱 Architecture
-data/<br>
-├── raw/ # Raw extracted data<br>
-├── processed/ # Transformed data<br>
+data/\
+├── raw/ # Raw extracted data\
+├── processed/ # Transformed data
 
-db/<br>
-├── schema.sql # Database schema<br>
+db/\
+├── schema.sql # Database schema
 
-src/<br>
-├── extract.py # Extract data from API<br>
-├── transform.py # Transform raw data<br>
-├── load.py # Load data into storage/database<br>
-├── pipeline.py # ETL orchestration<br>
-├── utils/<br>
-│ └── logger.py # Logging module<br>
-├── connect/<br>
-│ ├── connection.py # Database connection<br>
-│ └── config.py # Configuration<br>
+src/\
+├── extract.py # Extract data from API\
+├── transform.py # Transform raw data\
+├── load.py # Load data into storage/database\
+├── pipeline.py # ETL orchestration\
+├── utils/\
+│ └── logger.py # Logging module\
+├── connect/\
+│ ├── connection.py # Database connection\
+│ └── config.py # Configuration
 
 ## ⚙️ Tech Stack
 
@@ -54,12 +54,33 @@ src/<br>
    - Inserts data into the database
    - Applies constraints and indexing
 
+## 📊 Sample Output
+
+Example of processed and structured data loaded into the database:
+
+| Name        | Region   | Capital      | Population |
+|-------------|----------|--------------|------------|
+| Brazil      | Americas | Brasília     | 213993437  |
+| Germany     | Europe   | Berlin       | 83240525   |
+| Japan       | Asia     | Tokyo        | 125836021  |
+
+## 📸 Database Preview
+
+Example query result from MySQL:
+
+*Command used:\
+SELECT name,region,capital,population\
+FROM countries\
+ORDER BY population DESC\
+LIMIT 5;*\
+<img width="445" height="129" alt="shot-2026-03-30_19-00-18" src="https://github.com/user-attachments/assets/56eb9d42-1b01-4764-9717-c0a80529db2b" /><br>
+
 ## 🚀 How to Run
 
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/mxavier-dev/etl-countries-pipeline.git
-cd etl-countries-pipeline
+cd etl-countries-pipeline/
 ```
 ### 2. Create virtual environment
 ```bash
@@ -83,6 +104,8 @@ mysql -u root -p etl_countries < db/schema.sql
 ```bash
 python -m src.pipeline
 ```
+> If you encounter a "python not found" error, make sure Python is installed and added to your system PATH.  
+> On some systems, you may need to use `python3` instead of `python`.
 
 ## 🧠 Design Decisions
  - Modular architecture (separation of concerns)
