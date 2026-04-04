@@ -1,6 +1,6 @@
 # 📊 ETL Countries Pipeline
 
-A modular ETL pipeline built in Python to extract, transform, and load country data from a public API into a relational database.
+A modular ETL pipeline built in Python to extract, transform, and load country data from a public API into a database.
 
 ## 📌 Overview
 
@@ -8,7 +8,7 @@ This project implements a complete ETL workflow:
 
 - **Extract**: fetches data from the REST Countries API  
 - **Transform**: cleans and structures the dataset  
-- **Load**: persists data into a relational database  
+- **Load**: persists data into a database  
 
 The goal is to simulate a real-world data engineering pipeline with a clear and maintainable structure.
 
