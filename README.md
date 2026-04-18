@@ -79,7 +79,7 @@ LIMIT 5;*\
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/mxavier-dev/etl-countries-pipeline.git
+git clone https://github.com/mxavier-dev/countries-etl-pipeline.git
 cd etl-countries-pipeline/
 ```
 ### 2. Create virtual environment
