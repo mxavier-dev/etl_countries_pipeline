@@ -13,23 +13,31 @@ This project implements a complete ETL workflow:
 The goal is to simulate a real-world data engineering pipeline with a clear and maintainable structure.
 
 ## 🧱 Architecture
-data/\
-├── raw/ # Raw extracted data\
-├── processed/ # Transformed data
-
-db/\
-├── schema.sql # Database schema
-
-src/\
-├── extract.py # Extract data from API\
-├── transform.py # Transform raw data\
-├── load.py # Load data into storage/database\
-├── pipeline.py # ETL orchestration\
-├── utils/\
-│ └── logger.py # Logging module\
-├── connect/\
-│ ├── connection.py # Database connection\
-│ └── config.py # Configuration
+```
+etl_pokeapi/
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── db/
+│   └── schema.sql
+│
+├── src/
+│   ├── connect/
+│   │   ├── config.py
+│   │   └── connection.py
+│   │
+│   ├── utils/
+│   │   └── logger.py
+│   │
+│   ├── extract.py
+│   ├── transform.py
+│   ├── load.py
+│   └── pipeline.py
+│
+├── .gitignore
+└── README.md
+```
 
 ## ⚙️ Tech Stack
 
